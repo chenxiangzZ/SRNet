@@ -36,7 +36,7 @@ python main.py --mode train \
 
 ### Test with Trained Model
 ```
-!python /content/drive/MyDrive/Baseline_GM/main.py --mode test \
+!python main.py --mode test \
 --dataset_path path/to/occluded/duke \
 --output_path ./results   \
 --resume_test_path  ./results/models   \
