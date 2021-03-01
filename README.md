@@ -1,5 +1,6 @@
-# HOReID
-[CVPR2020] High-Order Information Matters: Learning Relation and Topology for Occluded Person Re-Identification. [paper](http://openaccess.thecvf.com/content_CVPR_2020/html/Wang_High-Order_Information_Matters_Learning_Relation_and_Topology_for_Occluded_Person_CVPR_2020_paper.html)
+# SRNet
+Pose-guided Part Matching Network via Shrinking and Reweighting for Occluded Person
+Re-identification
 
 ### Update
 2021-03-01: Code is available.
@@ -8,8 +9,8 @@
 
 ### Set Up
 ```shell script
-conda create -n horeid python=3.7
-conda activate horeid
+conda create -n srnet python=3.7
+conda activate srnet
 conda install pytorch==1.1.0 torchvision==0.3.0 -c pytorch
 # GPU Memory >= 10G, Memory >= 20G
 ```
@@ -22,21 +23,25 @@ please download it to path ```./core/models/model_keypoints/pose_hrnet_w48_256x1
 
 
 ### Trained Model 
-* [BaiDuDisk](https://pan.baidu.com/s/10TQ221aPz5-FMaW2YP2NJw) (pwd:fgit)
+* BaiDuDisk (comming soon)
 * Google Drive (comming soon)
 
 ### Train
 ```
 python main.py --mode train \
---duke_path path/to/occluded/duke \
---output_path ./results 
+--dataset_path path/to/occluded/duke \
+--output_path  ./results   \
+--train_dataset duke
 ```
 
 ### Test with Trained Model
 ```
-python main.py --mode test \
---resume_test_path path/to/pretrained/model --resume_test_epoch 119 \
---duke_path path/to/occluded/duke --output_path ./results
+!python /content/drive/MyDrive/Baseline_GM/main.py --mode test \
+--dataset_path path/to/occluded/duke \
+--output_path ./results   \
+--resume_test_path  ./results/models   \
+--train_dataset duke \
+--resume_test_epoch   119
 ```
 
 ## Contacts
