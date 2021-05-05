@@ -1,10 +1,10 @@
 # SRNet
 Pose-guided Part Matching Network via Shrinking and Reweighting for Occluded Person
-Re-identification(Under reviewing......)
+Re-identification(Accepted)
 
 ### Update
 2021-03-01: We will open source when paper is accepted.
-
+2021-05-05：Happy News, Our paper is accepted.
 
 
 
